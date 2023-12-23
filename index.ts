@@ -187,8 +187,7 @@ async function main() {
                 }
                 const { mode: intervalMode } = parseInterval(scheduledInterval);
 
-                const oldLogbook = getLogbook(oldContent);
-                if (!oldLogbook) return;
+                const oldLogbook = getLogbook(oldContent) ?? [];
 
                 const currentLogbook = getLogbook(currentContent);
                 if (!currentLogbook) return;
